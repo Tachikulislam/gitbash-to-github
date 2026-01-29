@@ -105,3 +105,120 @@ Command: nano README.md
 Git Bash-এ তুমি README.md ফাইলের ভিতরের content দেখতে চাইলে কয়েকটা সহজ command ব্যবহার করতে পারো:
 
 Command: cat README.md
+
+We use the cat command to view what is written inside a file in the Terminal.
+Command: cat README.md
+[NOTE:
+	cat README.md            (cat filename)
+	cat = Concatenate
+           সাধারণভাবে এটি ফাইলের সম্পূর্ণ কনটেন্ট একসাথে স্ক্রিনে প্রিন্ট করে
+           ফাইল এডিট করে না, শুধু দেখায়
+]
+
+git init কমান্ড ব্যবহার করা হয় একটা সাধারণ ফোল্ডারকে Git repository বানানোর জন্য:
+Command: git init
+
+
+[NOTE:
+1. এই কমান্ড দিলে Git বুঝে যায় যে - “এই ফোল্ডারটা এখন থেকে version control   এর আওতায়”।
+2.ফোল্ডারের ভিতরে একটি hidden .git ফোল্ডার তৈরি হয়
+3.এই .git ফোল্ডারের ভিতরেই:
+file changes track করা হয়
+commit history থাকে
+branch information থাকে
+	4..git folder থাকলেই folder-টা Git repository
+]
+
+
+git status কমান্ড ব্যবহার করে আমরা Git repository-এর বর্তমান অবস্থা (current state) দেখি:
+
+Command: git status
+
+[NOTE:
+	Untracked files → নতুন ফাইল, যেগুলো Git এখনো track করছে না
+	Modified files → আগের ফাইলে পরিবর্তন হয়েছে
+Staged files → git add করা হয়েছে, commit-এর জন্য ready
+]
+
+git add . কমান্ড ব্যবহার করে আমরা বর্তমান ফোল্ডারের সব নতুন ও পরিবর্তিত ফাইলকে staging area-তে পাঠাই:
+
+Command: git add .
+
+[NOTE:
+1. সব untracked files track হতে শুরু করে
+2.সব modified files staging area-তে যায়
+3.ফাইলগুলো commit-এর জন্য ready হয়
+]
+
+git reset . কমান্ড ব্যবহার করা হয় staging area থেকে সব ফাইল সরিয়ে দেওয়ার জন্য:
+Command: git reset .
+
+
+[NOTE:
+ফাইল ডিলিট হয় না
+ফাইলের পরিবর্তনও নষ্ট হয় না
+শুধু staging area থেকে বের হয়ে যায়
+staged files → আবার modified / untracked অবস্থায় ফিরে যায়
+working directory যেমন ছিল, তেমনই থাকে
+]
+
+
+git commit -m "message" ব্যবহার করা হয় staging area-তে থাকা ফাইলগুলোর একটি snapshot (version) সংরক্ষণ করার জন্য:
+Command: git commit -m "your message"
+
+[NOTE:
+-m = message
+commit message-এ আমরা লিখি:
+কী পরিবর্তন করেছি
+কেন পরিবর্তন করেছি (সংক্ষেপে)
+]
+
+
+git log কমান্ড ব্যবহার করে আমরা Git repository-এর সব commit history দেখি:
+Command: git log
+
+[NOTE:
+	Commit hash (unique ID)
+Author name & email
+Date & time
+Commit message
+]
+
+git config --global user.email (your_github_gmail)@gmail.com - এই কমান্ড ব্যবহার করা হয় Git-এ নিজের পরিচয় (identity) সেট করার জন্য:
+
+Command: git config --global user.email tachikul@gmail.com
+
+git config --global user.name "your_github_name" - এই কমান্ড ব্যবহার করা হয় Git-এ নিজের নাম সেট করার জন্য:
+git config --global user.name Tachikul Islam
+git log -p কমান্ড ব্যবহার করে আমরা commit history এর সাথে প্রতিটি commit-এ কি কি পরিবর্তন হয়েছে (diff) তা দেখতে পারি:
+
+Command: git log -p
+
+git diff কমান্ড ব্যবহার করে আমরা working directory এবং staging area-তে থাকা পরিবর্তনগুলোর পার্থক্য (difference) দেখতে পারি।
+
+Command: git diff
+
+[NOTE:
+	কোন ফাইলের কোন লাইন added (+) বা removed (-) হয়েছে
+এটা staging area-তে commit করার আগে চেক করার জন্য perfect
+]
+
+Github a SSH key setup:
+Command: git remote add Tachikul (SSH key link copy and then paste)
+
+
+git remote -v কমান্ড ব্যবহার করে আমরা local Git repository-এর সাথে সংযুক্ত সব remote repository-এর URL দেখতে পারি:
+
+Command: git remote -v
+
+
+git push কমান্ড ব্যবহার করে আমরা local Git repository-এর commitগুলো remote repository (GitHub, GitLab ইত্যাদি)-এ পাঠাই:
+
+Command: git push Tachikul master        (git push <remote-name> <branch-name>)
+
+[NOTE:
+	git push - Local commits remote-এ push করা
+	Tachikul - Remote repository-এর nickname (যেমন origin)
+	Master - Remote branch-এ push করা (অধিকাংশ ক্ষেত্রে main branch)
+]
+
