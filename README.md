@@ -178,24 +178,31 @@ git log কমান্ড ব্যবহার করে আমরা Git repo
 Command: git log
 
 [NOTE:
-	Commit hash (unique ID)
+Commit # (unique ID)
 Author name & email
 Date & time
 Commit message
 ]
 
+
+Author information is added automatically when we make a commit in Git. To get this information correctly, we need to set 
+up the user name and user email first. The author information can be set up by following the process given below.
+
+
 git config --global user.email (your_github_gmail)@gmail.com - এই কমান্ড ব্যবহার করা হয় Git-এ নিজের পরিচয় (identity) সেট করার জন্য:
 
 Command: git config --global user.email tachikul@gmail.com
 
-git config --global user.name "your_github_name" - এই কমান্ড ব্যবহার করা হয় Git-এ নিজের নাম সেট করার জন্য:
-git config --global user.name Tachikul Islam
-git log -p কমান্ড ব্যবহার করে আমরা commit history এর সাথে প্রতিটি commit-এ কি কি পরিবর্তন হয়েছে (diff) তা দেখতে পারি:
+git config --global user.name "your_github_user_name" - এই কমান্ড ব্যবহার করা হয় Git-এ নিজের নাম সেট করার জন্য:
+Command: git config --global user.name Tachikul Islam
 
+
+git log -p কমান্ড ব্যবহার করে আমরা commit history এর সাথে প্রতিটি commit-এ কি কি পরিবর্তন হয়েছে (difference) দেখতে পারি:
 Command: git log -p
 
-git diff কমান্ড ব্যবহার করে আমরা working directory এবং staging area-তে থাকা পরিবর্তনগুলোর পার্থক্য (difference) দেখতে পারি।
 
+When we edit the README.md file using nano, Git marks the file as modified.We can use git status to see the change and git diff to see what was changed.(A file can be added, modified, or updated)
+git diff কমান্ড ব্যবহার করে আমরা working directory এবং staging area-তে থাকা পরিবর্তনগুলোর পার্থক্য (difference) দেখতে পারি।
 Command: git diff
 
 [NOTE:
@@ -203,6 +210,9 @@ Command: git diff
 এটা staging area-তে commit করার আগে চেক করার জন্য perfect
 ]
 
+
+Now, Enter your github account then click
+Newrepository -- Repository Name -- Create repository thrn 
 Github a SSH key setup:
 Command: git remote add Tachikul (SSH key link copy and then paste)
 
@@ -221,4 +231,7 @@ Command: git push Tachikul master        (git push <remote-name> <branch-name>)
 	Tachikul - Remote repository-এর nickname (যেমন origin)
 	Master - Remote branch-এ push করা (অধিকাংশ ক্ষেত্রে main branch)
 ]
+
+
+Search google - Setup SSH key in windows then 
 
