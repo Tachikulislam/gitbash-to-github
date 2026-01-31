@@ -233,5 +233,36 @@ Command: git push Tachikul master        (git push <remote-name> <branch-name>)
 ]
 
 
-Search google - Setup SSH key in windows then 
 
+GitHub এ SSH key দিয়ে push করার Step 
+
+1. Permission না দেয়ার কারণ:
+আগে GitHub password দিয়ে push করতো, এখন security reason এ password আর নেওয়া হয় না। এখন SSH key লাগবে।
+
+2. SSH key কী?
+Private key → তোমার কম্পিউটারে থাকে, কাউকে দেবে না।
+	Public key → GitHub এ add করতে হবে।
+
+3. Windows এ SSH key তৈরি করা:
+Chrome এ search করো: SSH key setup for Windows
+GitHub এর official Docs এ ঢুকো।
+Git Bash run করো।
+নিচের command লিখো এবং Enter চাপো:
+(ssh-keygen -t ed25519 -C your_github_email@gmail.com)ইমেল এর জায়গায় GitHub এ যেই ইমেল ব্যবহার করছো সেটা দিবে
+
+4. Then Enter
+
+5. Public key copy করা:
+File Explorer এ যাও:
+(C:\Users\YOUR_USERNAME\.ssh\id_ed25519.pub)
+ফাইলটি Notepad দিয়ে খুলে পুরা লেখা copy করো।
+
+6.GitHub এ SSH key add করা:
+GitHub এ login করো → Profile → Settings → SSH and GPG keys
+New SSH key ক্লিক করো
+Title: MY HP (As you wish)
+Key box এ copy করা key paste করো
+Add SSH key চাপো
+
+7. Push করা: Command: git push Tachikul master 
+	git push <remote-name> <branch-name>
