@@ -9,7 +9,7 @@ Step 1: Move to D drive
 Command: cd /d            (cd → Change Directory)
 
 Step 2: Create a folder
-Command: mkdir bongoDev           (mkdir → Make folder)
+Command: mkdir bongoDev     (mkdir → Make folder)
 
 Step 3: Enter the folder
 Command: cd bongoDev
@@ -29,8 +29,8 @@ Command: cd ..                  (“dot dot = back”)
            3. তাহলে যাবে:
            → /d/bongoDev
 
-	4. আর আবার cd .. দিলে:
-	→ /d
+	   4. আর আবার cd .. দিলে:
+	   → /d
 
 cd ..  → এক ধাপ পিছনে
 cd ../.. → দুই ধাপ পিছনে
@@ -56,9 +56,9 @@ ls        → সাধারণ তালিকা
 ls -a    → hidden ফাইলসহ সব দেখায়
                           {
                                output: .  ..  bongoDev  README.md  .gitignore
-                                 Notes:
+                                Note:
                                 . = current directory
-                                        .. = parent directory
+                                .. = parent directory
                           }
 ls -l     → details (size, permission) সহ দেখায়
 ls -la   →সব ফাইল (hidden + normal) দেখানো সাথে detailed info
@@ -126,7 +126,7 @@ Command: git init
 file changes track করা হয়
 commit history থাকে
 branch information থাকে
-	4..git folder থাকলেই folder-টা Git repository
+4..git folder থাকলেই folder-টা Git repository
 ]
 
 
@@ -135,8 +135,8 @@ git status কমান্ড ব্যবহার করে আমরা Git r
 Command: git status
 
 [NOTE:
-	Untracked files → নতুন ফাইল, যেগুলো Git এখনো track করছে না
-	Modified files → আগের ফাইলে পরিবর্তন হয়েছে
+Untracked files → নতুন ফাইল, যেগুলো Git এখনো track করছে না
+Modified files → আগের ফাইলে পরিবর্তন হয়েছে
 Staged files → git add করা হয়েছে, commit-এর জন্য ready
 ]
 
@@ -206,7 +206,7 @@ git diff কমান্ড ব্যবহার করে আমরা working
 Command: git diff
 
 [NOTE:
-	কোন ফাইলের কোন লাইন added (+) বা removed (-) হয়েছে
+কোন ফাইলের কোন লাইন added (+) বা removed (-) হয়েছে
 এটা staging area-তে commit করার আগে চেক করার জন্য perfect
 ]
 
@@ -227,9 +227,9 @@ git push কমান্ড ব্যবহার করে আমরা local G
 Command: git push Tachikul master        (git push <remote-name> <branch-name>)
 
 [NOTE:
-	git push - Local commits remote-এ push করা
-	Tachikul - Remote repository-এর nickname (যেমন origin)
-	Master - Remote branch-এ push করা (অধিকাংশ ক্ষেত্রে main branch)
+git push - Local commits remote-এ push করা
+Tachikul - Remote repository-এর nickname (যেমন origin)
+Master - Remote branch-এ push করা (অধিকাংশ ক্ষেত্রে main branch)
 ]
 
 
