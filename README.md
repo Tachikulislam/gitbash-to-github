@@ -77,7 +77,7 @@ Terminal / Git Bash স্ক্রিন খালি করা
 ]
 Command to go to home directory:
 
-Command: cd ~                 [~ = tilde]
+Command: cd ~       [~ = tilde]
 Description: Goes to the home directory of the current user.
 
 
@@ -100,8 +100,6 @@ Command: nano README.md
 লিখে Ctrl+O → Save, Ctrl+X → Exit
 ]
 
-
-             
 Git Bash-এ তুমি README.md ফাইলের ভিতরের content দেখতে চাইলে কয়েকটা সহজ command ব্যবহার করতে পারো:
 
 Command: cat README.md
@@ -111,8 +109,8 @@ Command: cat README.md
 [NOTE:
 	cat README.md            (cat filename)
 	cat = Concatenate
-           সাধারণভাবে এটি ফাইলের সম্পূর্ণ কনটেন্ট একসাথে স্ক্রিনে প্রিন্ট করে
-           ফাইল এডিট করে না, শুধু দেখায়
+        সাধারণভাবে এটি ফাইলের সম্পূর্ণ কনটেন্ট একসাথে স্ক্রিনে প্রিন্ট করে
+        ফাইল এডিট করে না, শুধু দেখায়
 ]
 
 git init কমান্ড ব্যবহার করা হয় একটা সাধারণ ফোল্ডারকে Git repository বানানোর জন্য:
@@ -146,8 +144,8 @@ Command: git add .
 
 [NOTE:
 1. সব untracked files track হতে শুরু করে
-2.সব modified files staging area-তে যায়
-3.ফাইলগুলো commit-এর জন্য ready হয়
+2. সব modified files staging area-তে যায়
+3. ফাইলগুলো commit-এর জন্য ready হয়
 ]
 
 git reset . কমান্ড ব্যবহার করা হয় staging area থেকে সব ফাইল সরিয়ে দেওয়ার জন্য:
@@ -233,7 +231,6 @@ Master - Remote branch-এ push করা (অধিকাংশ ক্ষেত
 ]
 
 
-
 GitHub এ SSH key দিয়ে push করার Step 
 
 1. Permission না দেয়ার কারণ:
@@ -257,12 +254,21 @@ File Explorer এ যাও:
 (C:\Users\YOUR_USERNAME\.ssh\id_ed25519.pub)
 ফাইলটি Notepad দিয়ে খুলে পুরা লেখা copy করো।
 
-6.GitHub এ SSH key add করা:
+6. GitHub এ SSH key add করা:
 GitHub এ login করো → Profile → Settings → SSH and GPG keys
 New SSH key ক্লিক করো
 Title: MY HP (As you wish)
 Key box এ copy করা key paste করো
 Add SSH key চাপো
 
-7. Push করা: Command: git push Tachikul master 
+7. Push করা: Command: git push Tachikul master
+ 
 	git push <remote-name> <branch-name>
+
+
+git reflog -> Git-এর undo history
+[NOTE:
+	তুমি Git-এ যাই করো (commit, reset, checkout, rebase) 
+	HEAD কোথায় কোথায় গেছে -> সব record রাখে git reflog
+	ভুল করলে আগের জায়গায় ফিরে আসার রাস্তা দেখায়।
+]
