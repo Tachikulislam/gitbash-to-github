@@ -263,7 +263,7 @@ Add SSH key চাপো
 
 7. Push করা: Command: git push Tachikul master
  
-	git push <remote-name> <branch-name>
+	git push (remote-name) (branch-name)
 
 
 git reflog -> Git-এর undo history
@@ -271,4 +271,11 @@ git reflog -> Git-এর undo history
 	তুমি Git-এ যাই করো (commit, reset, checkout, rebase) 
 	HEAD কোথায় কোথায় গেছে -> সব record রাখে git reflog
 	ভুল করলে আগের জায়গায় ফিরে আসার রাস্তা দেখায়।
+]
+
+
+rm command দিয়ে সিস্টেম থেকে file বা folder স্থায়ীভাবে (permanently) মুছে ফেলা হয়।
+Command: rm test.py(file name)              (rm -> remove (মুছে ফেলো))
+[NOTE:
+	rm দিয়ে delete করলে file সাধারণত Recycle Bin / Trash এ যায় না
 ]
